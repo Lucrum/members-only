@@ -1,0 +1,14 @@
+<%= form_with model: @post do |form| %>
+  <%= form.hidden_field :user_id%>
+
+  <%= form.label :title %><br>
+  <%= form.text_field :title%><br>
+
+  <%= form.label :author %><br>
+  <%= form.text_field :author, value: @author_name, disabled: true %><br>
+
+  <%= form.label :content %><br>
+  <%= form.text_area :content%><br>
+
+  <%= form.submit %>
+<% end %>
